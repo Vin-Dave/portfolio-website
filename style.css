@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 40px 0;
-  background-color: #a5d8bc;
+  background: linear-gradient(to bottom, #0172af, #74febd);
+  /* background-color: #1c2520;*/
   /* font-family: "Galyon", sans-serif; */
   font-family: "Lato", sans-serif;
 }
@@ -18,11 +19,46 @@ span {
 .image-porfolio {
   width: 200px;
   height: 200px;
+  border-radius: 200px;
 }
 section,
 header {
+  background-color: white;
   padding: 10px 60px 20px 60px;
   width: 960px;
   margin: 0 auto 0 auto;
   /*       L  G   P  D  */
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header adress img {
+  width: 15px;
+  height: 15px;
+
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+header ul {
+  list-style: none;
+}
+header li {
+  margin-bottom: 15px;
+}
+
+.hobby-section {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hobby-section li {
+  width: 50%;
+  display: flex;
 }
