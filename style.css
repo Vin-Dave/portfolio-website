@@ -12,8 +12,14 @@ h1 {
 h2 {
   font-size: 28px;
 }
+h3 {
+  margin-top: 5px;
+}
 span {
   color: gray;
+}
+p {
+  line-height: 1.5;
 }
 
 .image-porfolio {
@@ -35,14 +41,14 @@ header {
   align-items: center;
 }
 
-header adress img {
-  width: 15px;
-  height: 15px;
-
+header address img {
   margin-right: 10px;
   padding: 5px;
-  border-radius: 50%;
+  background-color: #0172af;
   vertical-align: middle;
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
 }
 
 header ul {
@@ -53,12 +59,25 @@ header li {
 }
 
 .hobby-section {
+  display: flex;
   list-style: none;
   padding: 0;
-  display: flex;
   flex-wrap: wrap;
 }
+
 .hobby-section li {
   width: 50%;
   display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.hobbies-img {
+  width: 100px;
+  height: 100px;
+}
+.hobby-section div {
+  margin-left: 20px;
+}
+.hobby-section p {
+  color: gray;
 }
