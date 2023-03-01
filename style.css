@@ -8,6 +8,7 @@ body {
 }
 h1 {
   font-size: 36px;
+  margin-bottom: 15px;
 }
 h2 {
   font-size: 28px;
@@ -21,22 +22,28 @@ span {
 p {
   line-height: 1.5;
 }
-
+li {
+  margin-bottom: 10px;
+}
 .image-porfolio {
   width: 200px;
   height: 200px;
   border-radius: 200px;
 }
-section,
-header {
-  background-color: white;
-  padding: 10px 60px 20px 60px;
+.main-container {
   width: 960px;
+  background-color: white;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
   margin: 0 auto 0 auto;
   /*       L  G   P  D  */
 }
+section,
+header {
+  padding: 10px 60px 20px 60px;
+}
 header {
   display: flex;
+  padding-top: 60px;
   justify-content: space-between;
   align-items: center;
 }
@@ -80,4 +87,27 @@ header li {
 }
 .hobby-section p {
   color: gray;
+}
+.link-cv-download {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  border: 2px solid #7b7777;
+  margin-top: 15px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 0 10px gray;
+  transition: background-color 0.5s, color 0.5s;
+}
+.link-cv-download:hover {
+  color: white;
+  background-color: black;
+}
+.link-cv-download:active {
+  text-decoration: underline;
+}
+.link-cv-download:focus {
+  outline: none;
+  color: yellow;
+  background-color: black;
 }
