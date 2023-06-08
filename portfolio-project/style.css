@@ -1,0 +1,184 @@
+:root {
+  --background-color-accent-1: #2a2a2a;
+  --background-color-accent-2: #202020;
+  --b-font: 5rem;
+  --h2-font: 3rem;
+  --p-font: 1rem;
+  --fontcolor: #fff;
+  --fontcolor-2: #ccc;
+  --accent-1: #ccc;
+  --accent-2: #ff4d05;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--background-color-accent-1);
+  color: var(--fontcolor);
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 25px 15%;
+  border-bottom: 1px solid transparent;
+  transition: all 0.45s ease;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  align-items: center;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+.nav-list a {
+  font-size: 17px;
+  color: var(--fontcolor-2);
+  font-weight: 500;
+  margin: 0 25px;
+  transition: all 0.45s ease;
+}
+.nav-list a:hover {
+  color: var(--accent-2);
+}
+.nav-list a.focus-nav {
+  color: var(--accent-2);
+}
+.menu-icon {
+  z-index: 1001;
+  cursor: pointer;
+  margin-left: 25px;
+  font-size: 35px;
+  color: var(--fontcolor);
+  display: none;
+}
+.nav-logo {
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  color: var(--accent-1);
+}
+
+span {
+  color: var(--accent-2);
+}
+
+section {
+  padding: 160px 15% 120px;
+}
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+  /*
+ 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+    url("https://wallpapercave.com/wp/wp6350596.jpg"); */
+  background-size: cover;
+  background-position: center;
+}
+.slide-box {
+  margin-bottom: 20px;
+}
+.hero h1 {
+  color: var(--fontcolor);
+  list-style: 1.1;
+  margin: 0 0 8px;
+
+  font-size: var(--b-font);
+
+  font-weight: 700;
+}
+
+.hero h3 {
+  line-height: 1.1;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0 0 35px;
+  color: var(--fontcolor);
+}
+.hero p {
+  font-size: var(--p-font);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: var(--accent-1);
+}
+.box-one {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 32px;
+  font-size: 20px;
+  margin-right: 15px;
+  font-weight: 500;
+  border-radius: 7px;
+  background-color: var(--accent-2);
+  color: var(--fontcolor);
+  height: 32px;
+}
+.box-two {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--accent-1);
+  display: inline-block;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-hello {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--fontcolor);
+  border-radius: 10px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 12px 28px;
+
+  transition: all 0.45s ease;
+  background: var(--accent-2);
+}
+.btn-hello:hover {
+  transform: scale(0.9);
+}
+.btn-play {
+  color: var(--fontcolor);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-left: 35px;
+  font-weight: 500;
+}
+.btn-play span i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  font-size: 35px;
+  color: var(--fontcolor);
+  background-color: var(--accent-2);
+  transition: all 0.45s ease;
+}
+
+.btn-play span i:hover {
+  transform: scale(1.1) translate(4px);
+}
