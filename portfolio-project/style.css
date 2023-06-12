@@ -1,13 +1,13 @@
 :root {
-  --background-color-accent-1: #2a2a2a;
-  --background-color-accent-2: #202020;
+  --background-color-accent-1: #1e2b3e;
+  --background-color-accent-2: #121a26;
   --b-font: 5rem;
   --h2-font: 3rem;
   --p-font: 1rem;
   --fontcolor: #fff;
   --fontcolor-2: #ccc;
   --accent-1: #ccc;
-  --accent-2: #ff4d05;
+  --accent-2: #7140bf;
 }
 
 * {
@@ -84,7 +84,7 @@ section {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: #333;
+  background-color: var(--background-color-accent-2);
   /*
  
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
@@ -118,6 +118,7 @@ section {
   margin-bottom: 40px;
   color: var(--accent-1);
 }
+/*
 .box-one {
   display: inline-block;
   padding: 0 15px;
@@ -141,6 +142,9 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+*/
+
 .btn-hello {
   display: inline-block;
   font-size: 1rem;
@@ -155,7 +159,7 @@ section {
 }
 .btn-hello:hover {
   transform: scale(0.9);
-}
+} /*
 .btn-play {
   color: var(--fontcolor);
   display: inline-flex;
@@ -182,14 +186,15 @@ section {
 .btn-play span i:hover {
   transform: scale(1.1) translate(4px);
 }
-
+*/
 header.sticky {
-  background-color: var(--background-color-accent-1);
+  background-color: var(--background-color-accent-2);
   border-bottom: 1px solid #333;
   padding: 12px 15%;
 }
 
 .about-me-section {
+  background-color: var(--background-color-accent-1);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -275,7 +280,7 @@ header.sticky {
   display: inline-block;
   border-radius: 5px;
   padding: 8px 18px;
-  background: #333;
+  background: #7140bf;
   transition: all 0.45s ease;
 }
 .read-more:hover {
@@ -322,7 +327,7 @@ header.sticky {
   flex-direction: column;
   overflow: hidden;
   transition: all 0.45s ease;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), #ff004f);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #7140bf);
 }
 .layer h5 {
   font-size: 20px;
@@ -560,7 +565,7 @@ footer {
   .nav-list a.focus-nav {
     color: var(--fontcolor);
   }
-  .nav-list .open {
+  .nav-list.open {
     top: 100%;
   }
 }
