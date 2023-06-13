@@ -15,6 +15,42 @@ window.onscroll = () => {
   navList.classList.remove("open");
 };
 
+function updateCountdown() {
+  let currentDate = new Date();
+  let countdownElements = document.getElementsByClassName("countdown");
+
+  for (let i = 0; i < countdownElements.length; i++) {
+    let countdownElement = countdownElements[i];
+    let targetDate = new Date(countdownElement.dataset.targetDate);
+
+    let difference = currentDate - targetDate;
+    let years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365));
+    let months = Math.floor(
+      (difference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
+    );
+
+    let countdownText = "";
+
+    if (years === 1) {
+      countdownText += "1 rok";
+    } else if (years > 1) {
+      countdownText += years + " lata";
+    }
+
+    if (months === 1) {
+      countdownText += " 1 miesiąc";
+    } else if (months > 1 && months < 5) {
+      countdownText += " " + months + " miesiące";
+    } else if (months >= 5 || months === 0) {
+      countdownText += " " + months + " miesięcy";
+    }
+
+    countdownElement.innerHTML = countdownText;
+  }
+}
+
+updateCountdown();
+
 window.addEventListener("scroll", stickyToggle);
 window.addEventListener("scroll", function () {
   const navLinks = document.querySelectorAll(".nav-list a");
