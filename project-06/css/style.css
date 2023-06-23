@@ -1,0 +1,53 @@
+section {
+  position: relative;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  height: 300px;
+  background-color: #ddd;
+}
+
+div {
+  height: 100px;
+  width: 100px;
+  border: 3px solid black;
+}
+
+.red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: tomato;
+}
+
+.blue {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  background-color: royalblue;
+}
+
+.green {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  background-color: greenyellow;
+}
+
+.gold {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  background-color: gold;
+}
+
+.silver {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  background-color: silver;
+}
+
+.black {
+  background-color: black;
+  display: inline-block;
+}
