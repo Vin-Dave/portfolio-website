@@ -1,113 +1,94 @@
-body {
+* {
   margin: 0;
-  padding: 40px 0;
-  background: linear-gradient(to bottom, #0172af, #74febd);
-  /* background-color: #1c2520;*/
-  /* font-family: "Galyon", sans-serif; */
-  font-family: "Lato", sans-serif;
-}
-h1 {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-h2 {
-  font-size: 28px;
-}
-h3 {
-  margin-top: 5px;
-}
-span {
-  color: gray;
-}
-p {
-  line-height: 1.5;
-}
-li {
-  margin-bottom: 10px;
-}
-.image-porfolio {
-  width: 200px;
-  height: 200px;
-  border-radius: 200px;
-}
-.main-container {
-  width: 960px;
-  background-color: white;
-  box-shadow: 0 0 10px rgb(0, 0, 0);
-  margin: 0 auto 0 auto;
-  /*       L  G   P  D  */
-}
-section,
-header {
-  padding: 10px 60px 20px 60px;
-}
-header {
-  display: flex;
-  padding-top: 60px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header address img {
-  margin-right: 10px;
-  padding: 5px;
-  background-color: #0172af;
-  vertical-align: middle;
-  border-radius: 50px;
-  width: 15px;
-  height: 15px;
-}
-
-header ul {
-  list-style: none;
-}
-header li {
-  margin-bottom: 15px;
-}
-
-.hobby-section {
-  display: flex;
-  list-style: none;
   padding: 0;
-  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  background-color: #333;
 }
 
-.hobby-section li {
-  width: 50%;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 40px;
+.box {
+  padding: 60px 140px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #222;
+  box-shadow: 0 0 15px rgba(0, 140, 255, 0.6);
 }
-.hobbies-img {
-  width: 100px;
-  height: 100px;
-}
-.hobby-section div {
-  margin-left: 20px;
-}
-.hobby-section p {
-  color: gray;
-}
-.link-cv-download {
+
+.link {
+  position: relative;
+  font-weight: 800;
+  padding: 10px 30px;
+  color: rgb(0, 140, 255);
   text-decoration: none;
-  color: black;
-  padding: 10px 20px;
-  border: 2px solid #7b7777;
-  margin-top: 15px;
-  border-radius: 20px;
-  display: inline-block;
-  box-shadow: 0 0 10px gray;
-  transition: background-color 0.5s, color 0.5s;
 }
-.link-cv-download:hover {
-  color: white;
-  background-color: black;
+
+.link,
+.link::before,
+.link::after {
+  transition: 0.4s;
 }
-.link-cv-download:active {
-  text-decoration: underline;
+
+.one::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
 }
-.link-cv-download:focus {
-  outline: none;
-  color: yellow;
-  background-color: black;
+
+.one:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.two::after,
+.two::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.two::after {
+  top: 1px;
+  left: 0;
+  height: 0;
+  left: 0;
+  border-top: 0 solid #fff;
+  border-left: 0 solid #fff;
+}
+.two::before {
+  bottom: 1px;
+  right: 5px;
+  width: 0;
+  height: 0;
+  border-bottom: 0 solid #fff;
+  border-right: 0 solid #fff;
+}
+
+.two:hover::after {
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+
+.two:hover::before {
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+.two:hover::after,
+.two:hover::before {
+  width: 40px;
+  height: 50%;
 }
