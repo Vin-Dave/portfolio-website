@@ -92,3 +92,76 @@ body {
   width: 40px;
   height: 50%;
 }
+.three::after,
+.three::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  border: 0 solid #fff;
+}
+
+.three::after {
+  left: 0%;
+}
+
+.three::before {
+  right: 0%;
+}
+.three:hover::after,
+.three:hover::before {
+  width: 50%;
+  border: 1px solid #fff;
+}
+.four {
+  z-index: 1;
+}
+.four::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5%;
+  background-color: #fff;
+  z-index: -1;
+}
+.four:hover {
+  color: #000;
+}
+.four:hover::after {
+  height: 100%;
+}
+
+.five::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1.5px solid #fff;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.five::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1.5px solid #fff;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.five:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.five:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
