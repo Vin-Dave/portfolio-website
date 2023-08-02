@@ -21,15 +21,7 @@ body {
   color: var(--font-color);
   height: 100vh;
 }
-
-label,
-input {
-  height: 40px;
-  line-height: 40px;
-  font-size: 30px;
-}
-div {
-  border: 2px solid black;
-  font-size: 40px;
-  margin: 20px;
+div p {
+  text-align: center;
+  border: 2px solid red;
 }

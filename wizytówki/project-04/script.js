@@ -1,18 +1,19 @@
-const input = document.querySelector("input");
-const div = document.querySelector("div");
-const passwords = ["jedEN", "DwA", "dwa"];
-const messages = ["super", "działa!", "aaa"];
+const btn = document.querySelector(".generate");
+const sections = document.querySelector("section");
+const number = 101;
+const char = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()";
+const charNum = 10;
 
-const showMessage = (e) => {
-  passwords.forEach((pass, index) => {
-    if (e.target.value.toLowerCase() === pass.toLowerCase()) {
-      console.log("ok");
-
-      div.textContent = messages[index];
-    } else {
-      console.log("Nie działa");
+function generateCode() {
+  for (let i = 0; i < number; i++) {
+    let code = "";
+    for (let i = 0; i < charNum; i++) {
+      const index = Math.floor(Math.random() * char.length);
+      code += char[index];
     }
-  });
-};
-
-input.addEventListener("input", showMessage);
+    const div = document.createElement("div");
+    div.textContent = code;
+    sections.append(div);
+  }
+}
+btn.addEventListener("click", generateCode);
