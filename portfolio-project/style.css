@@ -118,7 +118,7 @@ section {
   margin-bottom: 40px;
   color: var(--accent-1);
 }
-/*
+
 .box-one {
   display: inline-block;
   padding: 0 15px;
@@ -142,8 +142,6 @@ section {
   align-items: center;
   justify-content: center;
 }
-
-*/
 
 .btn-hello {
   display: inline-block;
@@ -382,7 +380,7 @@ header.sticky {
 .contact-text p {
   font-size: var(--p-font);
   color: var(--fontcolor-2);
-  line-height: 1.8;
+  line-height: 1.4;
   margin-bottom: 30px;
 }
 
@@ -390,6 +388,7 @@ header.sticky {
   color: var(--fontcolor);
   margin: 18px 0;
   font-size: 20px;
+  line-height: 1.5;
   font-weight: 600;
 }
 .list {
@@ -404,7 +403,7 @@ header.sticky {
 
 .list li a {
   display: block;
-  color: var(--fontcolor-2);
+  color: var(--fontcolor);
   font-size: 14px;
   transition: all 0.45s ease;
 }
@@ -475,8 +474,9 @@ footer {
   padding: 20px 15%;
 }
 .end-container p {
+  text-align: center;
   color: var(--fontcolor-2);
-  font-size: 14px;
+  font-size: 19px;
 }
 .arrow-up i {
   padding: 10px;
@@ -571,6 +571,6 @@ footer {
 }
 
 .countdown {
-  display: block;
+  display: inline-block;
   font-weight: 500;
 }

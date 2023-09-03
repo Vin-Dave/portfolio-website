@@ -40,9 +40,9 @@ function updateCountdown() {
     if (months === 1) {
       countdownText += " 1 miesiąc";
     } else if (months > 1 && months < 5) {
-      countdownText += " " + months + " miesiące";
+      countdownText += " " + months + " months";
     } else if (months >= 5 || months === 0) {
-      countdownText += " " + months + " miesięcy";
+      countdownText += " " + months + " months";
     }
 
     countdownElement.innerHTML = countdownText;
