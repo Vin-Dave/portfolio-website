@@ -329,12 +329,12 @@ header.sticky {
 }
 .layer h5 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 15px;
 }
 
 .layer p {
-  color: var(--fontcolor-2);
+  color: var(--fontcolor);
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -536,7 +536,7 @@ footer {
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 890px) {
   #menu-icon {
     display: block;
   }
