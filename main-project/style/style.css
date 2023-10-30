@@ -1,0 +1,41 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 500;
+	color: #fff;
+	font-size: 62.5%;
+	line-height: 1.7;
+	padding: 35px;
+}
+header {
+	height: 95vh;
+	background-image: linear-gradient(
+			to bottom,
+			rgba(29, 26, 57, 0.5),
+			rgba(69, 25, 82, 0.8)
+		),
+		url("https://pixabay.com/get/g9e4913c056eda5db1eca54ccce250dcf6bdd56cd516c84a906e03f7a2a78b44298acab6fc8f14844ccfca8c8fbdf1f7112c2b1359a879a5779233a5c4c62fd6c_1280.jpg");
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+/*
+body.darkmode {
+  --background-color: #30343f;
+  --fontcolor: #ffffff;
+  --accent-1: #ed7d9f;
+  --accent-2: #ffd9da;
+  --accent-3: #ac024e;
+  --button-info: #1b2021;
+  --counter-color: var(--accent-1);
+  --nav-hover: var(--accent-1);
+  transition: var(--transition-delay);
+}
+*/
