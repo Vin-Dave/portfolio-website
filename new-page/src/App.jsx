@@ -9,6 +9,27 @@ function App() {
     projects: [],
   });
 
+  function handleAddNote(project) {
+    setStateProject((prevState) => {
+      return {
+        selectedProject: undefined,
+        projects: [
+          ...prevState.projects,
+
+          { ...project, id: prevState.projects.at(-1)?.id + 1 || 1 },
+        ],
+      };
+    });
+  }
+
+  function handleCancelSubmit() {
+    setStateProject((prevState) => {
+      return {
+        ...prevState,
+        selectedProject: undefined,
+      };
+    });
+  }
   function showForm() {
     setStateProject((prevState) => {
       return {
@@ -21,11 +42,14 @@ function App() {
 
   if (stateProject.selectedProject === undefined) {
     content = <NoneSelectedProject onclick={showForm} />;
-  } else if (stateProject.selectedProject === null) content = <EmptyProject />;
+  } else if (stateProject.selectedProject === null)
+    content = (
+      <EmptyProject submitForm={handleAddNote} onCancel={handleCancelSubmit} />
+    );
 
   return (
     <main className="h-screen my-8 flex gap-8">
-      <Sidebar onclick={showForm} />
+      <Sidebar onclick={showForm} memo={stateProject.projects} />
       {content}
     </main>
   );
