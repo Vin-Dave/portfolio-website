@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "../Button/Button";
 
-export default function SelectedProject({ memo }) {
-  const formattedDate = new Date(project.dueDate).toLocaleDateString("en-US", {
+export default function SelectedProject({ memo, deleteNote }) {
+  const formattedDate = new Date(memo.dueDate).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -15,7 +15,10 @@ export default function SelectedProject({ memo }) {
           <h1 className="text-3xl font-bold text-stone-600 mb-2">
             {memo.title}
           </h1>
-          <button className="text-stone-600 hover:text-stone-950">
+          <button
+            onClick={() => deleteNote(memo.id)}
+            className="text-stone-600 hover:text-stone-950"
+          >
             Delete
           </button>
         </div>
