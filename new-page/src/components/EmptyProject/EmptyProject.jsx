@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Inputs from "../Inputs/Inputs";
 import Modal from "../Modal/Modal";
 
-export default function EmptyProject({ submitForm, cancel }) {
+export default function EmptyProject({ submitForm, onCancel }) {
   const title = useRef();
   const description = useRef();
   const dueDate = useRef();
@@ -33,17 +33,17 @@ export default function EmptyProject({ submitForm, cancel }) {
   return (
     <>
       <Modal ref={modal} buttonCaption="close">
-        <h2 className="text-stone-500 my-5 text-2xl">error</h2>
+        <h2 className="text-stone-500 my-5 text-2xl">Information</h2>
         <p className="text-stone-500 mb-5">
-          Error dataError dataError dataError dataError data
+          Check that all fields are filled in correctly
         </p>
-        <p className="text-stone-500 mb-5">check Data</p>
+        <p className="text-stone-500 mb-5">Error</p>
       </Modal>
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
           <li>
             <button
-              onClick={cancel}
+              onClick={onCancel}
               className="text-stone-800 hover:text-stone-950"
             >
               Cancel
