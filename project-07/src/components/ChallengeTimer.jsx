@@ -11,7 +11,7 @@ export default function ChallengeTimer({ title, targetTime }) {
   function handleStartAction() {
     time.current = setTimeout(() => {
       setTimerExpired(true);
-      dialog.current.showModal();
+      dialog.current.show();
     }, targetTime * 1000);
 
     setTimerStarted(true);
