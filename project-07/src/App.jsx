@@ -1,7 +1,7 @@
-import ChallengeTimer from "./components/ChallengeTimer.jsx";
 import Player from "./components/Player.jsx";
+import ChallengeTimer from "./components/ChallengeTimer.jsx";
 
-function App() {
+export default function App() {
   return (
     <>
       <Player />
@@ -13,4 +13,3 @@ function App() {
     </>
   );
 }
-export default App;
