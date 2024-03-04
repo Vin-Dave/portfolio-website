@@ -1,0 +1,94 @@
+:root {
+  --background-color: #ffffff;
+  --font-color: #1b2021;
+  --accent-1: #ed7d9f;
+  --accent-2: #ac024e;
+  --accent-3: #ffd9da;
+  --button-info: #1b2021;
+  --counter-color: var(--accent-2);
+  --nav-hover: var(--accent-2);
+  --transition-delay: 0.3s linear;
+}
+* {
+  padding: 10px 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+section.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  padding: 30px 20px;
+  background-color: #ac024e;
+}
+div.box {
+  position: relative;
+  background-color: #ffd9da;
+  width: 350px;
+  height: 500px;
+  margin: 5px 10px;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+h2,
+p {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.block-info {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 10px;
+  cursor: crosshair;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  z-index: 999;
+}
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #1b2021b3;
+  opacity: 0;
+  transition: opacity 0.45s;
+}
+.box-one {
+  background-image: url("https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_1280.jpg");
+}
+.box-two {
+  background-image: url("https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_1280.jpg");
+}
+.box-three {
+  background-image: url("https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_1280.jpg");
+}
+
+.block-info:hover + .text-box {
+  opacity: 1;
+}
+
+@media (max-width: 370px) {
+  div.box {
+    width: 300px;
+  }
+}
