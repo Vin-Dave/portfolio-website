@@ -1,0 +1,75 @@
+@import "./colors";
+@import "./components";
+@import "./mixins";
+
+*,
+*::before,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.7rem;
+  background-color: #333;
+}
+//TOGGLE
+.toggle-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  color: #000;
+  z-index: 999;
+  cursor: pointer;
+
+  &:hover {
+    .toggle-menu__bars::after,
+    .toggle-menu__bars::before {
+      width: 100%;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 9px;
+  }
+  &__box {
+    position: relative;
+    width: 40px;
+    height: 30px;
+  }
+  &__bars,
+  &__bars::after,
+  &__bars::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    transition: width 0.3s;
+
+    // @include toggleBtn;
+  }
+  &__bars {
+    width: 100%;
+    &::after {
+      width: 60%;
+      top: 13px;
+    }
+    &::before {
+      width: 30%;
+      top: 27px;
+    }
+  }
+}
