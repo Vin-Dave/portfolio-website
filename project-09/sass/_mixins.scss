@@ -6,3 +6,11 @@
   right: 0;
   transition: width 0.3s;
 }
+
+@mixin imgHero($img) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: $blue-gradient, url($img);
+  background-attachment: fixed;
+}

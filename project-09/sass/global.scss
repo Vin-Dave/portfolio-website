@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Nunito", sans-serif;
   font-size: 1.7rem;
-  background-color: #333;
+  height: 300vh;
 }
 //TOGGLE
 .toggle-menu {
@@ -71,5 +71,30 @@ body {
       width: 30%;
       top: 27px;
     }
+  }
+}
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 70vh;
+  text-align: center;
+  padding: 10em;
+  background-color: #f2b622;
+  color: #003b56;
+  // @include imgHero(
+  //   "https://cdn.pixabay.com/photo/2023/04/11/13/27/bird-7917250_1280.jpg"
+  // );
+  // background-attachment: scroll;
+
+  &__name-company {
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 5em;
   }
 }

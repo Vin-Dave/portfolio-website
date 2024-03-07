@@ -10,9 +10,37 @@
   width: 70%;
 
   &-left {
-    top: 0;
-    right: -50px;
+    bottom: 0;
+    left: -50px;
     transform: skew(45deg);
-    position: relative;
+  }
+  &-rigth {
+    top: 0;
+    left: -50px;
+    transform: skew(45deg);
+  }
+}
+.btn-animation {
+  position: absolute;
+  transition: background-color 0.25s;
+  overflow: hidden;
+  z-index: 0;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    z-index: -1;
+  }
+  &:hover::before {
+    transform: scaleX(2);
+    transform-origin: left;
   }
 }
