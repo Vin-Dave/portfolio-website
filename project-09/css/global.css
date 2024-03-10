@@ -21,13 +21,13 @@
   transform: skew(45deg);
 }
 
-.btn-animation {
-  position: absolute;
+.link-animation {
+  position: relative;
   transition: background-color 0.25s;
   overflow: hidden;
   z-index: 0;
 }
-.btn-animation::before {
+.link-animation::before {
   display: block;
   content: "";
   position: absolute;
@@ -39,8 +39,9 @@
   transform-origin: right;
   transition: transform 0.25s;
   z-index: -1;
+  color: #fff;
 }
-.btn-animation:hover::before {
+.link-animation:hover::before {
   transform: scaleX(2);
   transform-origin: left;
 }
@@ -71,7 +72,6 @@ body {
   padding: 1em;
   background: none;
   border: 1px solid transparent;
-  color: #000;
   z-index: 999;
   cursor: pointer;
 }
@@ -96,6 +96,7 @@ body {
   right: 0;
   height: 2px;
   transition: width 0.3s;
+  background-color: #003b56;
 }
 .toggle-menu__bars {
   width: 100%;
@@ -113,19 +114,67 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-height: 70vh;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
   text-align: center;
-  padding: 10em;
-  background-color: #f2b622;
+  padding: 2em;
   color: #003b56;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f2b622;
+  background-attachment: fixed;
+  background-attachment: scroll;
 }
 .header__name-company {
+  font-size: 5rem;
   font-weight: 800;
 }
+.header__description {
+  color: #fff;
+  font-size: 1.7rem;
+}
+.header__link {
+  margin-top: 2em;
+  padding: 0.8em 1.6em;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 9px;
+  color: #003b56;
+  background-color: #ffffff;
+}
+.header__link::before {
+  background-color: #c62f31;
+}
 
-@media (max-width: 400px) {
+@media (max-width: 767px) {
+  .white-block {
+    width: 45%;
+  }
+}
+@media (orientation: landscape) {
   .header {
-    padding: 5em;
+    height: 100vh;
+  }
+}
+@media (min-width: 767px) {
+  .header__name-company {
+    font-size: 7rem;
+  }
+  .header__description {
+    font-size: 2rem;
+  }
+  .header__link {
+    padding: 25px 55px;
+    border-radius: 20px;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .toggle-menu {
+    top: 55px;
+    right: 65px;
   }
 }/*# sourceMappingURL=global.css.map */

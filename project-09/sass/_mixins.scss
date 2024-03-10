@@ -11,6 +11,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: $blue-gradient, url($img);
+  // background-image: $light-gradient, url($img);
+  background-color: $background-color; //temp
   background-attachment: fixed;
 }

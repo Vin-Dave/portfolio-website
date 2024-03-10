@@ -5,7 +5,7 @@
 }
 .white-block {
   position: absolute;
-  background-color: $pure-white;
+  background-color: #fff;
   height: 40px;
   width: 70%;
 
@@ -20,8 +20,8 @@
     transform: skew(45deg);
   }
 }
-.btn-animation {
-  position: absolute;
+.link-animation {
+  position: relative;
   transition: background-color 0.25s;
   overflow: hidden;
   z-index: 0;
@@ -38,6 +38,7 @@
     transform-origin: right;
     transition: transform 0.25s;
     z-index: -1;
+    color: #fff;
   }
   &:hover::before {
     transform: scaleX(2);

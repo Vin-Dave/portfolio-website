@@ -1,33 +1,20 @@
 $main-color: #c62f31;
-$secondary-color: #164dcc;
-$pure-white: #fff;
-$light-white: #eee;
-$dark: #2e2e2e;
-$green-color: #00ffaa;
-$green-color-hover: #0fe29c;
+$background-color: #f2b622;
+$text-color: #003b56;
+$text-color-secondary: #fff;
+$light-background-color: lighten($background-color, 10%);
+$dark-background-color: darken($background-color, 10%);
 
-$light-blue-gradient: linear-gradient(
+$light-text-color: lighten($text-color, 20%);
+$dark-text-color: darken($text-color, 20%);
+
+$light-gradient: linear-gradient(
   45deg,
-  rgba(8, 206, 255, 0.75),
-  rgba(8, 24, 255, 0.75)
+  lighten($main-color, 20%),
+  lighten($background-color, 20%)
 );
-$blue-gradient: linear-gradient(
+$dark-gradient: linear-gradient(
   45deg,
-  rgba(20, 105, 241, 0.75),
-  rgba(42, 10, 184, 0.75)
-);
-$purple-gradient: linear-gradient(
-  45deg,
-  rgba(190, 10, 214, 0.75),
-  rgba(68, 0, 255, 0.75)
-);
-$blue-gradient-solid: linear-gradient(
-  45deg,
-  rgb(20, 105, 241),
-  rgb(42, 10, 184)
-);
-$light-blue-gradient-solid: radial-gradient(
-  circle at top right,
-  rgb(0, 78, 255) 0%,
-  rgb(0, 212, 255) 100%
+  darken($main-color, 20%),
+  darken($background-color, 20%)
 );

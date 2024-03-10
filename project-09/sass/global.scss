@@ -28,7 +28,6 @@ body {
   padding: 1em;
   background: none;
   border: 1px solid transparent;
-  color: #000;
   z-index: 999;
   cursor: pointer;
 
@@ -58,6 +57,7 @@ body {
     right: 0;
     height: 2px;
     transition: width 0.3s;
+    background-color: $text-color;
 
     // @include toggleBtn;
   }
@@ -77,24 +77,70 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-height: 70vh;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
   text-align: center;
-  padding: 10em;
-  background-color: #f2b622;
-  color: #003b56;
-  // @include imgHero(
-  //   "https://cdn.pixabay.com/photo/2023/04/11/13/27/bird-7917250_1280.jpg"
-  // );
-  // background-attachment: scroll;
+  padding: 2em;
+
+  color: $text-color;
+  @include imgHero(
+    "https://cdn.pixabay.com/photo/2023/04/11/13/27/bird-7917250_1280.jpg"
+  );
+  background-attachment: scroll;
 
   &__name-company {
+    font-size: 5rem;
     font-weight: 800;
+  }
+  &__description {
+    color: $text-color-secondary;
+    font-size: 1.7rem;
+  }
+  &__link {
+    margin-top: 2em;
+    padding: 0.8em 1.6em;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 9px;
+    color: $text-color;
+    background-color: #ffffff;
+    &::before {
+      background-color: $main-color;
+    }
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 767px) {
+  .white-block {
+    width: 45%;
+  }
+}
+
+@media (orientation: landscape) {
   .header {
-    padding: 5em;
+    height: 100vh;
+  }
+}
+@media (min-width: 767px) {
+  .header {
+    &__name-company {
+      font-size: 7rem;
+    }
+    &__description {
+      font-size: 2rem;
+    }
+    &__link {
+      padding: 25px 55px;
+      border-radius: 20px;
+      font-size: 2rem;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .toggle-menu {
+    top: 55px;
+    right: 65px;
   }
 }
