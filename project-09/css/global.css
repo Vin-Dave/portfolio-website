@@ -94,7 +94,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   transition: width 0.3s;
   background-color: #003b56;
 }
@@ -154,6 +154,47 @@ body {
     width: 45%;
   }
 }
+.navigation {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.716);
+  z-index: 899;
+}
+.navigation__box {
+  display: block;
+}
+.navigation__box li {
+  position: relative;
+  list-style: none;
+  margin: 0.5em auto;
+  padding: 0.4em 0.7em;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  transition: before 0.35s;
+}
+.navigation__box li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 3px;
+  background-color: black;
+}
+.navigation__box li a {
+  text-decoration: none;
+  color: #003b56;
+}
+
 @media (orientation: landscape) {
   .header {
     height: 100vh;
