@@ -66,6 +66,8 @@ body {
     font-size: 3rem;
     margin-right: auto;
     padding: 0 15px;
+    font-weight: 900;
+    color: $main-color;
   }
   & li:first-child::before {
     content: none;
@@ -123,7 +125,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1280px) {
   .navigation {
     position: fixed;
     top: 0;
@@ -135,7 +137,7 @@ body {
     height: 100vh;
     backdrop-filter: blur(10px);
 
-    background-color: rgba(255, 255, 255, 0.716);
+    background-color: rgba(255, 255, 255, 0.13);
     z-index: 899;
     &__box {
       width: auto;
@@ -149,7 +151,6 @@ body {
         text-align: center;
         font-size: 2.4rem;
         font-weight: 600;
-        transition: all 0.35s;
       }
 
       & li::before {
@@ -159,11 +160,19 @@ body {
         content: "";
         height: 100%;
         width: 3px;
-        background-color: black;
+        background-color: $main-color;
+        transition: all 0.25s;
+      }
+      & li:hover::before {
+        width: 100%;
+        z-index: -1;
       }
       & li a {
         text-decoration: none;
         color: $text-color;
+      }
+      & li a:hover {
+        color: #fff;
       }
     }
   }
@@ -258,7 +267,8 @@ body {
   display: flex;
 }
 
-@media (max-width: 767px) {
-  .header {
-  }
-}
+// @media (max-width: 1024px) {
+//   .header {
+//     min-height: 120vh;
+//   }
+// }
