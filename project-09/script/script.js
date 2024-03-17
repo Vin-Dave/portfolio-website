@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
   function handleToggleNav() {
     nav.classList.toggle("active");
   }
-  navBtn.addEventListener("click", handleToggleNav);
 
   navList.forEach((li) =>
     li.addEventListener("click", (e) => {
       handleToggleNav();
     })
   );
+
+  navBtn.addEventListener("click", handleToggleNav);
+  document.addEventListener("click", () => {});
 });
