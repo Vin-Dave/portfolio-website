@@ -23,17 +23,18 @@ body {
   top: 0;
   width: 100%;
   min-height: 8vh;
-  padding: 1em 4em;
+  padding: 1em 0;
   font-size: 1rem;
+  font-weight: 400;
   display: flex;
   background-color: #222831;
   text-decoration: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   cursor: pointer;
 }
 .nav__logo {
-  margin-left: 3em;
+  margin-left: 1em;
 }
 .nav__logo img {
   width: 70%;
@@ -61,7 +62,7 @@ body {
 .nav__contact {
   display: block;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-right: 3em;
   border-radius: 5px;
   background-color: transparent;
@@ -73,9 +74,10 @@ body {
 .header {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   background-color: #eeeeee;
-  min-height: 90vh;
+  min-height: 92vh;
   padding: 6.5em 0 2em 0;
   text-align: left;
 }
@@ -84,7 +86,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 40%;
+  width: 50%;
   padding-right: 2em;
   padding-left: 2em;
 }
@@ -108,7 +110,7 @@ body {
 }
 .header__image {
   width: 50%;
-  padding-left: 3rem;
+  padding-left: 2rem;
   align-content: center;
 }
 .header__image img {
@@ -117,37 +119,63 @@ body {
 }
 
 .main {
-  color: #fff;
-  min-height: 50vh;
+  display: flex;
+  color: #868585;
+  height: 100vh;
   background-color: #222831;
 }
-.main__box-one {
+.main__section {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
-.main__box-one img {
+.main__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 1em;
   width: 50%;
 }
-.main__flex {
-  width: 100%;
+.main__image img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.main__tekst-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 50%;
+  height: 100%;
+  margin: 0 2em;
+  color: #000000;
 }
-.main h2 {
-  font-size: 2rem;
+.main__tekst-box h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 2em;
+  color: #eeeeee;
 }
 .main__text {
-  background-color: #333;
-  padding: 3em 8em 3em 3em;
-  margin-top: 3em;
-  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 0;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 1em 2em;
+  border-radius: 1.4em;
 }
-.main__text p {
-  display: block;
-  font-size: 2em;
-  padding-bottom: 0.4em;
+.main__text p,
+.main__text span {
+  margin-left: -1em;
 }
 
 @media (max-width: 688px) and (orientation: landscape) {
@@ -167,13 +195,14 @@ body {
   }
   .header {
     flex-direction: column;
-    padding: 4em 0 2em 0;
+    padding: 5em 0 2em 0;
     text-align: center;
   }
   .header__text {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 46vh;
     width: 100%;
     padding: 0 2em;
   }
@@ -185,23 +214,48 @@ body {
     font-size: 1rem;
   }
   .header__text button {
-    background-color: #008a90;
-    padding: 20px 40px;
-    font-size: 1rem;
-    border-radius: 10px;
-    color: #fff;
-    border: none;
+    margin-bottom: 3em;
   }
   .header__image {
     display: flex;
-    margin-top: 1em;
+    margin-top: 3em;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 0;
   }
   .header__image img {
-    min-width: 50%;
+    height: auto;
     border-radius: 20px;
+  }
+  .main {
+    height: auto;
+  }
+  .main__section {
+    flex-direction: column;
+    gap: 5em;
+  }
+  .main__image {
+    margin-top: 4em;
+    height: auto;
+    align-content: center;
+    width: 80%;
+  }
+  .main__image img {
+    height: auto;
+  }
+  .main__tekst-box {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0 2em 4em 2em;
+  }
+  .main__tekst-box h2 {
+    text-align: center;
+    margin: 1em 2em 1.5em 2em;
+  }
+  .main__text {
+    margin: 1em 2em;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */
