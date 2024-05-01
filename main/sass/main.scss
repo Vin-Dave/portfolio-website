@@ -1,0 +1,372 @@
+@import "./colors";
+@import "./components";
+@import "./global";
+@import "./mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+// Navigation
+
+.nav {
+  //   background: rgba(255, 255, 255, 0.25);
+
+  //   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  //   backdrop-filter: blur(9.1px);
+  //   -webkit-backdrop-filter: blur(9.1px);
+  //   border: 1px solid rgba(255, 255, 255, 0.3);
+  //   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-color;
+  box-shadow: $shadow-dark;
+  z-index: 999;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__image {
+    height: 25px;
+    width: auto;
+    margin-right: 10px;
+  }
+  &__text {
+    font-size: 1.5rem;
+    color: $pure-white;
+    /* -webkit-background-clip: text;
+  background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+  &__item {
+    margin-left: 1.4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $pure-white;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+
+  &__link:hover {
+    color: $secondary-color; //edit
+    /* background-color: #f5f5f5; */
+  }
+
+  &__button {
+    padding: 1em 2em;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid $light-white;
+    border-radius: 5px;
+    color: $light-white;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  //   MOBILE ICON
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger__line {
+  width: 25px;
+  height: 2px;
+  background-color: $pure-white;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in;
+}
+
+.hamburger-active {
+  transition: all 0.3s ease-in;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .hamburger__line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .hamburger__line:nth-child(1),
+.hamburger-active .hamburger__line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .hamburger__line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .hamburger__line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  //   top: 0;
+  left: -70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70%;
+  /* height: 100vh; */
+  padding: 20% 0;
+  background: rgba(255, 255, 255);
+  transition: all 0.5s ease-in;
+  z-index: 2;
+
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    margin-bottom: 32px;
+  }
+  &__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 95%;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  &__link:hover {
+    color: $secondary-color;
+  }
+  &__button {
+    padding: 1em 2em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid $dark;
+    color: $dark;
+  }
+}
+
+.active {
+  left: 0;
+  box-shadow: $shadow-light;
+}
+
+// HEADER
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #eeeeee;
+  min-height: 92vh;
+  //   padding: 6.5em 0 2em 0;
+  text-align: left;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.header__text {
+  flex: 1 1 60%;
+  padding-right: 2em;
+}
+
+.header__text h2 {
+  font-weight: 800;
+  font-size: 8rem;
+  margin-bottom: 0.3em;
+}
+
+.header__text p {
+  margin-bottom: 1.5em;
+  font-size: 2rem;
+}
+
+.header__text button {
+  background-color: #008a90;
+  padding: 1em 2em;
+  font-size: 2rem;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.header__image {
+  flex: 1 1 35%;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.header__image img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+// MAIN
+.main {
+  display: flex;
+  color: #868585;
+  height: 100vh;
+  background-color: #222831;
+}
+.main__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 1em;
+  width: 50%;
+}
+.main__image img {
+  max-width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.main__tekst-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  margin: 0 2em;
+  color: #000000;
+}
+.main__tekst-box h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 2em;
+  color: #eeeeee;
+}
+.main__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 0;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 1em 2em;
+  border-radius: 1.4em;
+}
+.main__text p,
+.main__text span {
+  margin-left: -1em;
+}
+
+//MEDIA
+
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block;
+  }
+  .nav__list,
+  .nav__button {
+    display: none;
+  }
+
+  .header {
+    &__text {
+      padding-right: 0;
+      margin-bottom: 2rem;
+      & h2 {
+        font-size: 3rem;
+      }
+      & p {
+        font-size: 1.5rem;
+      }
+      & button {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding-top: 50px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+
+    &__text,
+    &__image {
+      flex: 1 1 100%;
+    }
+
+    &__text {
+      padding-right: 0;
+      margin-bottom: 2rem;
+      & h2 {
+        font-size: 5rem;
+      }
+      & p {
+        font-size: 2rem;
+      }
+      & button {
+        font-size: 2rem;
+      }
+    }
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      padding: 0 2rem;
+    }
+  }
+}
