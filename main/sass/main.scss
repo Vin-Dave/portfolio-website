@@ -99,6 +99,10 @@ body {
     color: $light-white;
     font-size: 1.3rem;
     font-weight: 500;
+    transition: background-color 0.35s ease;
+  }
+  &__button:hover {
+    background-color: $secondary-color;
   }
 
   //   MOBILE ICON
@@ -223,7 +227,7 @@ body {
     margin-bottom: 1.5em;
     font-size: 2rem;
   }
-  &__text button {
+  &__text a {
     background-color: #008a90;
     padding: 1em 2em;
     font-size: 2rem;
@@ -231,7 +235,13 @@ body {
     color: #fff;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.35s ease;
   }
+  &__text a:hover {
+    background-color: #17bac2;
+  }
+
   &__image {
     flex: 1 1 35%;
     padding-left: 2rem;
@@ -471,6 +481,7 @@ body {
 
   flex-wrap: wrap;
   justify-content: center;
+
   margin-top: 20px;
 }
 
@@ -542,16 +553,21 @@ body {
   &__container {
     // padding-top: 20px;
   }
+  &__text {
+    margin-bottom: 10px;
+  }
 
   &__section {
     margin-bottom: 20px;
   }
 
   &__title {
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
 
   &__address {
+    font-size: 1.4rem;
     margin-bottom: 5px;
   }
 
@@ -565,6 +581,7 @@ body {
   }
 
   &__link {
+    font-size: 1.4rem;
     text-decoration: none;
     color: inherit;
   }
@@ -574,10 +591,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &__text {
-      margin-bottom: 10px;
-    }
 
     &__icons {
       margin-top: 10px;

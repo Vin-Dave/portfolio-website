@@ -107,6 +107,10 @@ body {
   color: #eeeeee;
   font-size: 1.3rem;
   font-weight: 500;
+  transition: background-color 0.35s ease;
+}
+.nav__button:hover {
+  background-color: #00adb5;
 }
 
 .hamburger {
@@ -223,7 +227,7 @@ body {
   margin-bottom: 1.5em;
   font-size: 2rem;
 }
-.header__text button {
+.header__text a {
   background-color: #008a90;
   padding: 1em 2em;
   font-size: 2rem;
@@ -231,6 +235,11 @@ body {
   color: #fff;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.35s ease;
+}
+.header__text a:hover {
+  background-color: #17bac2;
 }
 .header__image {
   flex: 1 1 35%;
@@ -504,13 +513,18 @@ body {
   gap: 50px;
 }
 
+.footer__text {
+  margin-bottom: 10px;
+}
 .footer__section {
   margin-bottom: 20px;
 }
 .footer__title {
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 .footer__address {
+  font-size: 1.4rem;
   margin-bottom: 5px;
 }
 .footer__list {
@@ -521,6 +535,7 @@ body {
   margin-bottom: 5px;
 }
 .footer__link {
+  font-size: 1.4rem;
   text-decoration: none;
   color: inherit;
 }
@@ -529,9 +544,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.footer__copyright__text {
-  margin-bottom: 10px;
 }
 .footer__copyright__icons {
   margin-top: 10px;
