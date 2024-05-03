@@ -6,3 +6,12 @@ const toggleNav = () => {
   mobileNav.classList.toggle("hamburger-active");
 };
 mobileNav.addEventListener("click", () => toggleNav());
+
+window.addEventListener("scroll", function () {
+  var nav = document.querySelector(".nav");
+  if (window.scrollY > 100) {
+    nav.classList.add("transparent");
+  } else {
+    nav.classList.remove("transparent");
+  }
+});
