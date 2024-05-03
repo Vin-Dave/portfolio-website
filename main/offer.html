@@ -10,12 +10,33 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
+
     <link rel="stylesheet" href="/css/main.css" />
   </head>
+
   <body>
     <!-- NAVIGATION -->
     <nav class="nav">
-      <a href="/index.html">
+      <a href="#">
         <div class="nav__logo">
           <!-- <img
             src="https://w7.pngwing.com/pngs/361/627/png-transparent-leaf-logo-green-leaves-green-and-teal-leaf-logo-text-maple-leaf-grass.png"
@@ -33,7 +54,7 @@
           <a href="/references.html" class="nav__link">Referencje</a>
         </li>
         <li class="nav__item">
-          <a href="/project.html" class="nav__link">Zrealizowane obiekty</a>
+          <a href="#projects" class="nav__link">Zrealizowane obiekty</a>
         </li>
         <li class="nav__item">
           <a href="/offer.html" class="nav__link">Oferta</a>
@@ -65,73 +86,86 @@
       <a href="/contact.html" class="mobile-menu__button">Kontakt</a>
     </div>
 
-    <!-- HEADER -->
-
-    <!-- CONTACT -->
-    <header></header>
-
-    <main class="contact">
-      <section class="contact__title">
-        <h2>Skontaktuj się z nami</h2>
-      </section>
-      <section class="contact__wrapper" id="#contact-page">
-        <div class="contact__section">
-          <div class="contact__form-container">
-            <form action="">
-              <input type="name" placeholder="Twoje imię" required />
-              <input type="email" placeholder="Adres email" required />
-              <input type="tel" placeholder="Numer telefonu" />
-              <input type="name" placeholder="Temat" required />
-              <textarea
-                name=""
-                id=""
-                cols="35"
-                rows="10"
-                placeholder="Treść wiadomości"
-                required
-              ></textarea>
-              <input
-                type="submit"
-                value="Send Message"
-                class="contact-section__submit-btn"
-                required
-              />
-            </form>
-          </div>
-          <div class="contact__information">
-            <div class="contact__image">
-              <img src="assets/map.PNG" alt="" />
-            </div>
-            <div class="contact__text">
-              <div class="contact__box">
-                <p>Informacje o firmie</p>
-                <span>Imie nazwisko</span>
-                <span>Adres firmy</span>
-                <span>NIP</span>
-                <span>adres mailowy</span>
-                <span>adres strony</span>
-              </div>
-              <div class="contact__box">
-                <p>Właściciel</p>
-                <span>Imie nazwisko</span>
-                <span>Adres firmy</span>
-                <span>NIP</span>
-                <span>adres mailowy</span>
-                <span>adres strony</span>
-              </div>
-              <div class="contact__box">
-                <p>Partnerzy</p>
-                <span>Imie nazwisko</span>
-                <span>Adres firmy</span>
-                <span>NIP</span>
-                <span>adres mailowy</span>
-                <span>adres strony</span>
-              </div>
-            </div>
+    <main class="container">
+      <div class="carousel-controls">
+        <a href="#" class="carousel-control prev">Poprzedni</a>
+        <a href="#" class="carousel-control next">Następny</a>
+      </div>
+      <!-- HEADER -->
+      <div id="carousel" class="carousel">
+        <div class="carousel__item">
+          <img
+            src="assets/industrial_facility_interior.png"
+            alt="Placeholder Image"
+            class="carousel__image"
+          />
+          <div class="carousel__content">
+            <h3 class="carousel__title">Title 1</h3>
+            <p class="carousel__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="carousel__btn">Zobacz więcej</a>
           </div>
         </div>
-      </section>
+        <div class="carousel__item">
+          <img
+            src="assets/industrial_facility_interior.png"
+            alt="Placeholder Image"
+            class="carousel__image"
+          />
+          <div class="carousel__content">
+            <h3 class="carousel__title">Title 2</h3>
+            <p class="carousel__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="carousel__btn">Zobacz więcej</a>
+          </div>
+        </div>
+        <div class="carousel__item">
+          <img
+            src="assets/industrial_facility_interior.png"
+            alt="Placeholder Image"
+            class="carousel__image"
+          />
+          <div class="carousel__content">
+            <h3 class="carousel__title">Title 2</h3>
+            <p class="carousel__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="carousel__btn">Zobacz więcej</a>
+          </div>
+        </div>
+        <div class="carousel__item">
+          <img
+            src="assets/industrial_facility_interior.png"
+            alt="Placeholder Image"
+            class="carousel__image"
+          />
+          <div class="carousel__content">
+            <h3 class="carousel__title">Title 2</h3>
+            <p class="carousel__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="carousel__btn">Zobacz więcej</a>
+          </div>
+        </div>
+        <div class="carousel__item">
+          <img
+            src="assets/industrial_facility_interior.png"
+            alt="Placeholder Image"
+            class="carousel__image"
+          />
+          <div class="carousel__content">
+            <h3 class="carousel__title">Title 2</h3>
+            <p class="carousel__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="carousel__btn">Zobacz więcej</a>
+          </div>
+        </div>
+      </div>
     </main>
+
     <!-- CTA -->
     <section class="cta">
       <div class="cta__wrapper">

@@ -1,0 +1,13 @@
+@mixin flex-center() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin accordion-content() {
+  display: none;
+  padding: 0 16px;
+  color: $dark-color;
+  background: $pure-white;
+  transition: all 0.35s ease;
+}
