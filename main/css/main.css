@@ -824,10 +824,12 @@ body {
 }
 
 .services__item-title {
+  color: #eeeeee;
   margin-bottom: 0.6em;
 }
 
 .services__item-text {
+  color: white;
   font-size: 1.4rem;
 }
 

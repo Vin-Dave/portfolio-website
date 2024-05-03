@@ -875,12 +875,15 @@ body {
 }
 
 .services__item-title {
+  color: $light-white;
   margin-bottom: 0.6em;
 }
 
 .services__item-text {
+  color: $pure-white;
   font-size: 1.4rem;
 }
+
 @media (min-width: 576px) {
   .services__item {
     -webkit-box-orient: horizontal;
