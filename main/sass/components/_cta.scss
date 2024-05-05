@@ -49,6 +49,9 @@
   &__button:hover {
     background-color: $secondary-color;
   }
+  &__button--scondary:hover {
+    background-color: $secondary-color;
+  }
 }
 
 .button-container {
@@ -60,17 +63,17 @@
   margin-top: 20px;
 }
 
-@media screen and (min-width: 768px) {
-  .cta__wrapper {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
+// @media screen and (min-width: 768px) {
+//   .cta__wrapper {
+//     flex-direction: row;
+//     align-items: flex-start;
+//     justify-content: space-between;
+//   }
 
-  .cta__content {
-    margin-right: 20px;
-  }
-}
+//   .cta__content {
+//     margin-right: 20px;
+//   }
+// }
 
 @media screen and (max-width: 790px) {
   .cta {

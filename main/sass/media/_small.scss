@@ -1,0 +1,75 @@
+// @media (max-width: 768px) {
+//   .accordion-wrapper {
+//     width: 80%;
+//   }
+
+//   .accordion {
+//     &__label {
+//       font-size: 1.5rem;
+//     }
+
+//     &__content {
+//       font-size: 1.3rem;
+//     }
+//   }
+
+//   .grid-cols-2 {
+//     grid-template-columns: repeat(1, minmax(0, 1fr));
+//   }
+// }
+@media (min-width: 768px) {
+  .panel {
+    &__form {
+      gap: 30px;
+    }
+
+    &__form-group {
+      &:nth-child(1) {
+        grid-column: 1/4;
+        grid-row: 1/2;
+      }
+
+      &:nth-child(2) {
+        grid-column: 4/7;
+        grid-row: 1/2;
+      }
+
+      &:nth-child(3) {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+      }
+    }
+
+    &__submit {
+      grid-row: 3/4;
+    }
+  }
+}
+
+.contact {
+  flex-direction: column;
+
+  &__wrapper,
+  &__information {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__image,
+  &__wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: start;
+    gap: 20px;
+  }
+}
