@@ -44,7 +44,6 @@ $(document).ready(function () {
     ],
   });
 
-  // Obsługa przycisków nawigacyjnych
   $(".carousel-control.prev").click(function () {
     $("#carousel").slick("slickPrev");
   });

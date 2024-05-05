@@ -1,0 +1,101 @@
+.cta {
+  background-color: $main-color;
+  padding: 100px 0;
+  text-align: center;
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $light-white;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  &__description {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $pure-white;
+    text-align: left;
+  }
+  &__content {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: $pure-white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px; /* Odstęp między przyciskami */
+    border: 1px solid $light-white;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  &__button--secondary {
+    background-color: $secondary-color;
+  }
+  &__button:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.button-container {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .cta__wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .cta__content {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .cta {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__description {
+      font-weight: 400;
+    }
+    &__button {
+      font-size: 1.2rem;
+      width: 80%;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+  }
+}
