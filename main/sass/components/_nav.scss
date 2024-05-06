@@ -173,13 +173,3 @@
   left: 0;
   box-shadow: $shadow-light;
 }
-
-@media screen and (max-width: 790px) {
-  .hamburger {
-    display: block;
-  }
-  .nav__list,
-  .nav__button {
-    display: none;
-  }
-}

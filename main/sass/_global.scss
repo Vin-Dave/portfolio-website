@@ -23,5 +23,16 @@ body::-webkit-scrollbar-thumb {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
+*::selection {
+  // background-color: red;
+}
 
-// NAVIGATION
+h2 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
