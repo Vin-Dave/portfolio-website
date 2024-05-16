@@ -25,34 +25,35 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+  background-color: $light-white;
   font-size: 1.6rem;
 }
 
 .wrapper {
-  margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 // HEADER
 .header {
   display: flex;
   justify-content: center;
-  background-color: $light-white;
   min-height: 92vh;
-  //   padding: 6.5em 0 2em 0;
   text-align: left;
   padding-bottom: 50px;
 
   &__wrapper {
     display: flex;
-    // flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    width: 90%;
+    padding: 0 20px;
+    width: 100%;
   }
   &__text {
+    text-align: left;
     flex: 1 1 50%;
     padding-right: 2em;
   }
@@ -73,12 +74,14 @@ body {
     transition: background-color 0.35s ease;
   }
   &__text a:hover {
-    background-color: $secondary-color;
+    background-color: $hover;
   }
 
   &__image {
+    display: flex;
     flex: 1 1 50%;
-    padding-left: 2rem;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
   }
   &__image img {
@@ -92,8 +95,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
-  // color: #868585;
-
   background-color: $main-color;
   &__wrapper {
     display: flex;
@@ -101,8 +102,9 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    width: 90%;
-    // height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   &__image {
@@ -123,7 +125,6 @@ body {
     flex: 1 1 65%;
   }
   &__tekst-box h3 {
-    // padding-top: 2em;
     text-align: center;
 
     margin-bottom: 0.5em;
@@ -133,7 +134,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
     text-align: left;
     margin: 1em 0;
     font-size: 1.5rem;
@@ -162,19 +162,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
-  // color: #868585;
   background-color: $main-color;
   padding: 100px 0;
   &__wrapper {
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap;
     justify-content: center;
-    // align-items: center;
     text-align: center;
+    margin: 0 auto;
+    padding: 0 20px;
     max-width: 1200px;
-    width: 90%;
-    // height: 100vh;
+    width: 100%;
   }
   &__text {
     color: $secondary-color;
@@ -199,8 +197,7 @@ body {
 // ELEMENTS
 
 .section_box {
-  padding: 50px 0;
-  background-color: $light-white;
+  padding: 65px 0 35px;
 
   & h3 {
     text-align: center;
@@ -212,15 +209,18 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
-  background-color: $light-white;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 35px;
+
   &__item {
-    flex: 0 1 calc(25% - 20px);
-    max-width: calc(25% - 20px);
+    flex: 0 1 calc(25%);
+    max-width: calc(25% - 15px);
     background-color: $pure-dark;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    // padding: 20px;
+
     overflow: hidden;
     text-align: center;
   }
@@ -251,7 +251,6 @@ body {
     margin-bottom: 20px;
   }
   &__btn {
-    // width: 100%;
     font-size: 1.4rem;
     font-weight: 400;
     padding: 10px 20px;
@@ -270,12 +269,18 @@ body {
 // SLIDER
 .section_title {
   text-align: left;
-  padding: 75px 25px 25px;
+  padding: 75px 20px 25px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .container {
-  padding: 50px 0;
+  padding: 50px 20px;
   position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .carousel-controls {
@@ -309,7 +314,7 @@ body {
 
 .carousel__item {
   text-align: center;
-  background-color: $light-white;
+  background-color: $box-color;
   border-radius: 20px;
   padding: 20px;
   margin-left: 20px;
@@ -334,21 +339,21 @@ body {
 .carousel__btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: $main-color;
+  background-color: $dark-color;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 .carousel__btn:hover {
-  background-color: $dark-color;
+  background-color: $main-color;
 }
 
 // ABOUT
 
 .about {
   background-color: $light-white;
-  padding: 40px 0 50px;
+  padding: 65px 20px 35px;
   &__wrapper {
     margin: 0 auto;
     max-width: 1200px;
@@ -385,9 +390,13 @@ body {
 }
 //
 .accordion-wrapper {
-  padding: 50px 0;
   border-radius: 5px;
   overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+
   // box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 
   width: 85%;
@@ -454,12 +463,17 @@ body {
 
 //
 // SERVICES
+
+.main-services {
+  background-color: $main-color;
+}
 .services {
   background-color: $main-color;
 }
 .wrapper {
   margin: 0 auto;
   width: 100%;
+
   max-width: 1200px;
 }
 
@@ -502,24 +516,21 @@ body {
 
 .information {
   padding: 75px 0 75px;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  // color: #868585;
-
+  background-color: $light-white;
   background-color: $main-color;
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
     max-width: 1200px;
-    width: 90%;
-    // height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   &__image {
-    flex: 1 1 35%;
+    flex: 1 1 40%;
   }
   &__image img {
     max-width: 100%;
@@ -527,19 +538,16 @@ body {
   }
 
   &__tekst-box {
-    padding-top: 50px;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    flex: 1 1 65%;
+    flex: 1 1 60%;
   }
   &__tekst-box h3 {
     padding-bottom: 1em;
     text-align: center;
-
-    // margin-bottom: 2em;
     color: $light-white;
   }
   &__text {
@@ -547,7 +555,6 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 80%;
-    // align-items: center;
     text-align: left;
     margin: 1em 0;
     font-size: 1.5rem;
@@ -557,11 +564,13 @@ body {
     border-radius: 1.4em;
   }
   &__text p {
+    margin-left: -1em;
     color: $pure-white;
     padding-bottom: 10px;
     font-weight: 500;
   }
   &__text span {
+    margin-left: -1em;
     font-weight: 400;
     color: $light-white;
   }
@@ -612,7 +621,7 @@ body {
 
       &:focus {
         outline: none;
-        border: 1px solid $secondary-color;
+        border: 2px solid $focus;
       }
     }
 
@@ -650,8 +659,8 @@ body {
     &:hover,
     &:focus {
       outline: none;
-      color: $dark;
-      background-color: $secondary-color;
+      color: $pure-white;
+      background-color: $hover;
     }
   }
 }

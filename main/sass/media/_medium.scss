@@ -51,7 +51,7 @@
 
       & p {
         font-size: 2rem;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
       & a {
         font-size: 1.5rem;
@@ -75,5 +75,17 @@
   .section__item {
     flex-basis: calc(50% - 20px);
     max-width: calc(50% - 20px);
+  }
+
+  .content {
+    &__text {
+      font-size: 2.21rem;
+    }
+    &__title {
+      font-size: 2.3rem;
+    }
+    &__span {
+      font-size: 1.6rem;
+    }
   }
 }
