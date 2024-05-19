@@ -361,6 +361,7 @@ body {
   padding: 65px 20px 35px;
   &__wrapper {
     margin: 0 auto;
+    padding: 0 20px;
     max-width: 1200px;
     display: flex;
     justify-content: center;
@@ -433,7 +434,7 @@ body {
     cursor: pointer;
 
     &:hover {
-      background-color: $dark;
+      background-color: $hover;
     }
   }
 
@@ -454,7 +455,7 @@ body {
 
     &:checked {
       ~ .accordion__label {
-        background: $secondary-color;
+        background: $focus;
       }
 
       ~ .accordion__content {
@@ -550,7 +551,7 @@ body {
     justify-content: space-around;
     flex: 1 1 60%;
   }
-  &__tekst-box h3 {
+  &__tekst-box h2 {
     padding-bottom: 1em;
     text-align: center;
     color: $light-white;

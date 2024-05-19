@@ -685,6 +685,7 @@ body {
 }
 .about__wrapper {
   margin: 0 auto;
+  padding: 0 20px;
   max-width: 1200px;
   display: flex;
   justify-content: center;
@@ -750,7 +751,7 @@ body {
   cursor: pointer;
 }
 .accordion__label:hover {
-  background-color: #2e2e2e;
+  background-color: #1e7d4f;
 }
 .accordion__content {
   display: none;
@@ -770,7 +771,7 @@ body {
   z-index: -1;
 }
 .accordion input:checked ~ .accordion__label {
-  background: #2d9a63;
+  background: #186441;
 }
 .accordion input:checked ~ .accordion__content {
   display: block;
@@ -854,7 +855,7 @@ body {
   justify-content: space-around;
   flex: 1 1 60%;
 }
-.information__tekst-box h3 {
+.information__tekst-box h2 {
   padding-bottom: 1em;
   text-align: center;
   color: #eeeeee;
@@ -1125,7 +1126,7 @@ body {
     flex: 1 1 65%;
     padding-bottom: 50px;
   }
-  .main__tekst-box h3 {
+  .main__tekst-box h2 {
     font-size: 2.5rem;
   }
   .main__text p {
