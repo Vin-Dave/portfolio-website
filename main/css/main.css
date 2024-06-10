@@ -295,7 +295,7 @@
   background-color: #186441;
 }
 .cta__button:hover {
-  background-color: #1e7d4f;
+  background-color: #393e46;
 }
 .cta__button--secondary:hover {
   background-color: #1e7d4f;
@@ -444,15 +444,14 @@ body {
 }
 .main__image img {
   max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .main__tekst-box {
   padding-top: 50px;
   padding-left: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-around;
   flex: 1 1 65%;
 }
@@ -551,16 +550,19 @@ body {
 }
 .section__image {
   width: 100%;
-  height: auto;
+  height: 350px;
   display: block;
   margin-bottom: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section__image img {
   width: 100%;
 }
 .section__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
   padding: 0 20px;
   text-align: left;
   margin-bottom: 30px;
@@ -794,7 +796,12 @@ body {
 }
 
 .services__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin: 2em 0;
 }
@@ -844,8 +851,7 @@ body {
 }
 .information__image img {
   max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .information__tekst-box {
   padding-left: 30px;
@@ -964,7 +970,12 @@ body {
     margin: 4.5em 0;
   }
   .services__item-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
     -webkit-box-pack: end;
     flex-direction: column;
     justify-content: flex-end;
@@ -1121,7 +1132,6 @@ body {
     padding-left: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
     flex: 1 1 65%;
     padding-bottom: 50px;
@@ -1234,7 +1244,12 @@ body {
 }
 @media (min-width: 576px) {
   .services__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .services__item-content {
@@ -1247,6 +1262,8 @@ body {
     width: 40%;
   }
   .services__item-img--right {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
   .services__item-img {
