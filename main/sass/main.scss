@@ -399,6 +399,7 @@ body {
   }
 }
 //
+
 .accordion-wrapper {
   border-radius: 5px;
   overflow: hidden;
@@ -418,60 +419,91 @@ body {
   font-weight: 700;
   padding-bottom: 25px;
 }
-
-.accordion {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 16px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &__label {
-    @include flex-center();
-    padding: 1.4rem;
-    background-color: $main-color;
-    color: $pure-white;
-    font-size: 1.6rem;
-    font-weight: 700;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $hover;
-    }
-  }
-
-  &__content {
-    @include accordion-content();
-
-    p {
-      margin: 0;
-      color: $dark-color;
-      font-size: 1.6rem;
-    }
-  }
-
-  input {
-    position: absolute;
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    z-index: -1;
-
-    &:checked {
-      ~ .accordion__label {
-        background: $focus;
-      }
-
-      ~ .accordion__content {
-        display: block;
-        max-height: 100vh;
-        padding: 16px;
-      }
-    }
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-//
+.accordion {
+  max-width: 800px;
+  margin: 2rem auto 100px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+}
+
+.accordion__item {
+  border-bottom: 1px solid #ddd;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.accordion__header {
+  padding: 1rem;
+  background: $main-color;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.accordion__arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 1rem;
+  background: #f9f9f9;
+  ul {
+    padding-left: 1.5rem;
+  }
+}
+
+.accordion__list {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion__list-item {
+  margin: 0.5rem 0;
+  font-size: 14px;
+  font-weight: 400;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+}
+
+.accordion__item.active .accordion__content {
+  max-height: 1000px;
+  padding: 1rem;
+}
+
+.accordion__item.active .accordion__arrow {
+  transform: rotate(180deg);
+}
+.accordion__list-item:hover {
+  background-color: $box-color;
+}
 // SERVICES
 
 .main-services {

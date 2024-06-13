@@ -3,6 +3,9 @@
   .hamburger {
     display: block;
   }
+  .nav {
+    justify-content: space-between;
+  }
   .nav__list,
   .nav__button {
     display: none;
@@ -199,16 +202,6 @@
     .main__text p,
     .main__text span {
       margin-left: -1em;
-    }
-  }
-
-  .accordion {
-    &__label {
-      font-size: 1.5rem;
-    }
-
-    &__content {
-      font-size: 1.3rem;
     }
   }
 }
