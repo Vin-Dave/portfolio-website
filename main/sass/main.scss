@@ -906,6 +906,16 @@ body {
 contact-popup a:hover {
   text-decoration: underline;
 }
+.animated-section {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+.animated-section-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
 
 @import "./media/large";
 @import "./media/medium";
