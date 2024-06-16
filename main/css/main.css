@@ -121,7 +121,7 @@
   height: 100vh;
   padding: 20% 0;
   transition: all 0.5s ease-in;
-  z-index: 2;
+  z-index: 99;
   overflow: hidden;
   background: rgba(238, 238, 238, 0.8);
   backdrop-filter: blur(9px);
@@ -523,9 +523,17 @@ body {
 }
 
 .slider__wrapper {
-  width: 100%;
-  max-width: 1200px;
   margin: 0 auto 200px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .slider__slide img {
@@ -961,9 +969,11 @@ body {
 .information__image {
   flex: 1 1 40%;
 }
-.information__image img {
+.information__image iframe {
   max-width: 100%;
-  object-fit: contain;
+  width: 500px;
+  height: 400px;
+  max-width: 100%;
 }
 .information__tekst-box {
   padding-left: 30px;
@@ -1075,6 +1085,103 @@ body {
   outline: none;
   color: white;
   background-color: #1e7d4f;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+.contact-popup-button {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: #2d9a63;
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-popup-button img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  margin-right: 10px;
+  animation: bounce 2s ease infinite;
+  animation-iteration-count: 1;
+  animation-delay: 6s;
+}
+
+.contact-popup-button:hover img {
+  transform: scale(1.1);
+}
+
+.contact-popup-button span {
+  font-size: 16px;
+}
+
+.contact-popup {
+  display: none;
+  position: fixed;
+  bottom: 110px;
+  left: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  z-index: 1001;
+  border: 1px solid #ccc;
+}
+
+.popup-content {
+  padding: 20px;
+  font-size: 14px;
+}
+
+.close-button {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-button:hover {
+  color: #444;
+}
+
+.contact-popup h4 {
+  margin-top: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.contact-popup p {
+  margin: 10px 0;
+}
+
+.contact-popup a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+contact-popup a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 992px) {

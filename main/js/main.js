@@ -17,3 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+document
+  .getElementById("contactPopupButton")
+  .addEventListener("click", function () {
+    document.getElementById("contactPopup").style.display = "block";
+  });
+
+document.querySelector(".close-button").addEventListener("click", function () {
+  document.getElementById("contactPopup").style.display = "none";
+});
