@@ -733,9 +733,10 @@ body {
 .carousel__image {
   width: 100%;
   max-width: 200px;
-  height: auto;
   display: block;
   margin: 0 auto;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
 
 .carousel__title {

@@ -420,16 +420,20 @@ body {
   background-color: $box-color;
   border-radius: 20px;
   padding: 20px;
+  // height: 200px;
   margin-left: 20px;
 }
 
 .carousel__image {
   width: 100%;
   max-width: 200px;
-  height: auto;
+
   display: block;
   margin: 0 auto;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
+
 .carousel__title {
   margin: 10px 0;
   font-size: 1.5rem;
