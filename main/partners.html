@@ -66,28 +66,35 @@
     </div>
 
     <!-- HEADER -->
-    <!-- <main>
-      <section class="partner">
-        <div class="wrapper">
-          <h2>Nasi Partnerzy</h2>
-          <div class="partner__box">
-            <div class="partner__item">
-              <img src="./assets/industrial_facility_interior.png" alt="" />
-            </div>
-            <div class="partner__item">
-              <img src="./assets/industrial_facility_interior.png" alt="" />
-            </div>
-            <div class="partner__item">
-              <img src="./assets/industrial_facility_interior.png" alt="" />
-            </div>
+    <header class="slider__wrapper">
+      <div class="slider">
+        <div class="slider__container">
+          <!-- Blok powtarzany dla każdego zdjęcia projektu -->
+          <div class="slider__slide">
+            <img
+              src="./assets/1.webp"
+              alt="Kolaż przedstawiający działalność usługową firmy elektrycznej, w tym budowę sieci zewnętrznych, instalacje wewnętrzne, oświetlenie terenów, systemy wykrywania pożarów i CCTV"
+            />
           </div>
+          <div class="slider__slide">
+            <img
+              src="./assets/slider_2.webp"
+              alt="Szczegółowe przedstawienie usług firmy elektrycznej, w tym instalacje kablowe na zewnątrz, systemy elektryczne wewnątrz budynków, oświetlenie publiczne oraz zaawansowane systemy bezpieczeństwa i automatyki"
+            />
+          </div>
+          <div class="slider__slide">
+            <img
+              src="./assets/slider_3.webp"
+              alt="Różnorodne instalacje elektryczne, pokazujące systemy alarmowe, instalacje domofonowe, strukturalne okablowanie danych oraz montaż paneli fotowoltaicznych na budynku komercyjnym."
+            />
+          </div>
+          <!-- Tutaj kolejne slajdy -->
         </div>
-      </section>
-
-      <section>
-        <h2>Nasi Klienci</h2>
-      </section>
-    </main> -->
+        <button class="slider__button slider__button--prev">&#10094;</button>
+        <button class="slider__button slider__button--next">&#10095;</button>
+        <div class="slider__pagination"></div>
+      </div>
+    </header>
     <!-- CTA -->
     <section class="cta">
       <div class="cta__wrapper">
@@ -103,8 +110,8 @@
           </p>
         </div>
         <div class="button-container">
-          <a href="#" class="cta__button">Skontaktuj się z nami</a>
-          <a href="#" class="cta__button cta__button--secondary"
+          <a href="./contact.html" class="cta__button">Skontaktuj się z nami</a>
+          <a href="./services.html" class="cta__button cta__button--secondary"
             >Dowiedz się więcej</a
           >
         </div>
@@ -123,34 +130,34 @@
               Profesjonalne podejście i kompleksowa obsługa - gwarancja
               bezpieczeństwa i satysfakcji naszych klientów.
             </p>
-            <p class="footer__address">Adres:</p>
-            <span class="footer__span"> Częstochowa 00-000</span>
           </div>
           <div class="footer__section">
             <h2 class="footer__title">Oferta</h2>
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="#" class="footer__link">Projekty</a>
+                <a href="./project.html" class="footer__link">Projekty</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Referencje</a>
+                <a href="./references.html" class="footer__link">Referencje</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Zrealizowane Obiety</a>
+                <a href="./project.html" class="footer__link"
+                  >Zrealizowane Obiety</a
+                >
               </li>
             </ul>
           </div>
           <div class="footer__section">
-            <h2 class="footer__title">Vin-Dave</h2>
+            <h2 class="footer__title">JGInstel</h2>
             <ul class="footer__list">
               <li class="footer__item">
                 <a href="./services.html" class="footer__link">O nas</a>
               </li>
+
               <li class="footer__item">
-                <a href="#" class="footer__link">Nasze realizacje</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Standardy</a>
+                <a href="./index.html#projects" class="footer__link"
+                  >Standardy</a
+                >
               </li>
             </ul>
           </div>
@@ -158,13 +165,17 @@
             <h2 class="footer__title">Kontakt</h2>
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="#" class="footer__link">Telefon: 000000000</a>
+                <a href="#" class="footer__link"
+                  >Telefon: <bold>606-761-742</bold></a
+                >
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Adres mailowy</a>
+                <a href="#" class="footer__link"
+                  >Adres mailowy: biuro@jginstel.pl</a
+                >
               </li>
               <li class="footer__item">
-                <a href="/contact.html" class="footer__link"
+                <a href="/contact.html#contact" class="footer__link"
                   >Formularz kontaktowy</a
                 >
               </li>
@@ -173,38 +184,34 @@
         </div>
         <div class="footer__copyright">
           <span class="footer__text"
-            >&copy; 2024 <a href="#" class="footer__link">Vin-Dave</a>. All
-            Rights Reserved.</span
+            >&copy; 2024 <a href="#" class="footer__link">JGINSTEL</a></span
           >
-          <div class="footer__icons">
+          <!-- <div class="footer__icons">
             <a href="#" class="footer__icon-link"
               ><img
-                src="/assets/icons8-facebook-50.png"
+                src="/assets/icons8-facebook-50.webp"
                 alt="Facebook"
                 class="footer__icon"
-                style="width: 40px"
             /></a>
 
             <a href="#" class="footer__icon-link"
               ><img
-                src="/assets/icons8-facebook-50.png"
+                src="/assets/icons8-facebook-50.webp"
                 alt="Twitter"
                 class="footer__icon"
-                style="width: 40px"
             /></a>
 
             <a href="#" class="footer__icon-link"
               ><img
-                src="/assets/icons8-facebook-50.png"
+                src="/assets/icons8-facebook-50.webp"
                 alt="Instagram"
                 class="footer__icon"
-                style="width: 40px"
             /></a>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
-
+    <script src="./js/header_slider.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
