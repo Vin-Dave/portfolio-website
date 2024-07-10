@@ -18,6 +18,12 @@
     align-items: center;
     cursor: pointer;
   }
+  &__logo h1 {
+    transition: 0.3s ease-in-out;
+  }
+  &__logo h1:hover {
+    color: $focus;
+  }
 
   &__image {
     height: 25px;
@@ -46,6 +52,7 @@
     font-weight: 400;
     padding: 4px 8px;
     border-radius: 5px;
+    transition: color 0.3s ease-in-out;
   }
 
   &__link:hover {

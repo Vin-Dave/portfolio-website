@@ -835,6 +835,27 @@ body {
     transform: translateY(-10px);
   }
 }
+/* styles.css */
+.company-location {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+.company-location__heading {
+  margin-bottom: 40px;
+  color: $dark-color;
+  font-weight: 900;
+}
+.company-location__map iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+@media (min-width: 1024px) {
+  .company-location__map iframe {
+    height: 600px;
+  }
+}
 
 .contact-popup-button {
   position: fixed;
@@ -845,7 +866,7 @@ body {
   display: flex;
   align-items: center;
   background: $focus;
-  color: $pure-white;
+  color: white;
   padding: 10px;
   border-radius: 30px;
   width: 210px;
@@ -913,7 +934,7 @@ body {
 }
 
 .contact-popup a {
-  color: #007bff;
+  color: $secondary-color;
   text-decoration: none;
 }
 
