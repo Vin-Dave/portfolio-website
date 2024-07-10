@@ -1120,11 +1120,13 @@ body {
   z-index: 1000;
   display: flex;
   align-items: center;
-  background: #2d9a63;
+  background: #186441;
   color: white;
   padding: 10px;
   border-radius: 30px;
+  width: 210px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
 }
 
 .contact-popup-button img {

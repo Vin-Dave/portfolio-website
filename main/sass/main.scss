@@ -844,11 +844,13 @@ body {
   z-index: 1000;
   display: flex;
   align-items: center;
-  background: $secondary-color;
-  color: white;
+  background: $focus;
+  color: $pure-white;
   padding: 10px;
   border-radius: 30px;
+  width: 210px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
 }
 
 .contact-popup-button img {
