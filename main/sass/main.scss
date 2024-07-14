@@ -455,6 +455,38 @@ body {
 .carousel__btn:hover {
   background-color: $main-color;
 }
+#photo-description-section .carousel-with-text {
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+#photo-description-section .carousel__item {
+  padding: 15px;
+  background-color: $pure-white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+#photo-description-section .carousel__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+#photo-description-section .carousel__description {
+  font-size: 1.2rem;
+  color: $text-color;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 13px 0;
+}
+
 // contact
 .support-section {
   background-color: $main-color;
@@ -670,7 +702,7 @@ body {
   margin: 0 auto;
   padding: 50px 20px;
 
-  // box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 
   width: 85%;
   max-width: 800px;
@@ -700,6 +732,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1s ease-out;
+  overflow: hidden;
 }
 
 .accordion__item {
@@ -711,8 +744,8 @@ body {
 
 .accordion__header {
   padding: 1rem;
-  background: $main-color;
-  color: #fff;
+  background: $pure-white;
+  color: $text-color;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -722,7 +755,7 @@ body {
 .accordion__title {
   font-size: 1.5rem;
   padding: 0.3em 0;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
 }
 
