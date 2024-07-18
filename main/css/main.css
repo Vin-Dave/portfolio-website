@@ -742,9 +742,13 @@ body {
   margin-left: 20px;
 }
 
+section#photo-description-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .carousel__image {
   width: 100%;
-  max-width: 200px;
   display: block;
   margin: 0 auto;
   aspect-ratio: 3/2;
