@@ -2,7 +2,7 @@ $font-size-large: 36px;
 $control-size: 50px;
 $transition-duration: 0.5s;
 
-.carousel {
+.slider-home-page {
   position: fixed;
   top: 0;
   left: 0;
@@ -75,6 +75,7 @@ $transition-duration: 0.5s;
     transition: color, background-color $transition-duration;
     font-weight: 700;
     border-radius: 5px;
+
     &:hover {
       background-color: $light-white;
       color: $text-color;
@@ -121,10 +122,10 @@ $transition-duration: 0.5s;
 }
 
 @media (max-width: 768px) {
-  .carousel__control {
+  .slider-home-page__control {
     display: none;
   }
-  .carousel__image {
+  .slider-home-page__image {
     aspect-ratio: 2 /2 !important;
     max-width: 90%;
     max-height: 80vh;
@@ -132,7 +133,7 @@ $transition-duration: 0.5s;
 }
 
 @media (max-width: 480px) {
-  .carousel__image {
+  .slider-home-page__image {
     max-width: 100%;
     max-height: 90vh;
   }

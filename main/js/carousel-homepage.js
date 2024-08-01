@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  const $carousel = $("#carousel");
-  const $carouselImage = $("#carouselImage");
-  const $thumbnails = $(".carousel__thumbnails");
+  const $carousel = $("#slider-home-page");
+  const $carouselImage = $("#sliderHomePageImage");
+  const $thumbnails = $(".slider-home-page__thumbnails");
   let images = [];
   let currentIndex = 0;
   let touchStartX = 0;
@@ -12,33 +12,39 @@ $(document).ready(function () {
     currentIndex = 0;
     showImage(currentIndex);
     populateThumbnails();
-    $carousel.removeClass("carousel--hidden");
+    $carousel.removeClass("slider-home-page--hidden");
   });
 
-  $("#closeCarousel").on("click", function () {
-    $carousel.addClass("carousel--hidden");
-  });
+  // Sprawdzenie czy przycisk zamykający istnieje i dodanie obsługi kliknięcia
+  const $closeButton = $("#sliderHomePageClose");
+  if ($closeButton.length) {
+    $closeButton.on("click", function () {
+      $carousel.addClass("slider-home-page--hidden");
+    });
+  } else {
+    console.error("Close button not found in the DOM.");
+  }
 
-  $(".carousel__control--prev").on("click", function () {
+  $(".slider-home-page__control--prev").on("click", function () {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
   });
 
-  $(".carousel__control--next").on("click", function () {
+  $(".slider-home-page__control--next").on("click", function () {
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
   });
 
   $(document).on("keydown", function (e) {
     if (e.key === "Escape") {
-      $carousel.addClass("carousel--hidden");
+      $carousel.addClass("slider-home-page--hidden");
     }
   });
 
   // Zamknięcie karuzeli po kliknięciu na tło
   $carousel.on("click", function (e) {
-    if ($(e.target).is("#carousel, .carousel__image")) {
-      $carousel.addClass("carousel--hidden");
+    if ($(e.target).is("#slider-home-page, .slider-home-page__image")) {
+      $carousel.addClass("slider-home-page--hidden");
     }
   });
 
