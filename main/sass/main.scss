@@ -1,7 +1,7 @@
 @import "./components/nav";
 @import "./components/footer";
 @import "./components/cta";
-
+@import "./components/carousel";
 @import "./global";
 @import "./mixins";
 @import "./colors";
@@ -362,6 +362,7 @@ body {
     border: 1px solid $focus;
     text-decoration: none;
     border-radius: 5px;
+    align-self: start;
     transition: background-color 0.3s ease;
   }
   &__btn:hover {
@@ -900,7 +901,7 @@ section#photo-description-section {
   bottom: 40px;
   left: 20px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 800;
   display: flex;
   align-items: center;
   background: $focus;
@@ -920,7 +921,6 @@ section#photo-description-section {
   animation: bounce 2s ease infinite;
   animation-iteration-count: 1;
   animation-delay: 6s;
-  // animation-play-state: paused;
 }
 
 .contact-popup-button:hover img {
@@ -940,7 +940,7 @@ section#photo-description-section {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   width: 320px;
-  z-index: 1001;
+  z-index: 800;
   border: 1px solid #ccc;
 }
 
