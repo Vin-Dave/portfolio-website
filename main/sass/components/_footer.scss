@@ -1,94 +1,85 @@
 .footer {
-  background-color: $light-white;
-  color: $dark;
+  padding: 2rem 0;
+
   &__container {
-    background-color: $light-white;
-    color: $dark;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 0 1rem;
   }
-}
 
-.grid {
-  display: grid;
-}
+  &__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr;
 
-.md\:grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
+      & > .footer__section--about {
+        grid-column: 1 / -1;
+      }
+    }
 
-.gap-8 {
-  gap: 50px;
-}
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
 
-.footer {
-  padding: 0 20px;
-  &__container {
-    // padding-top: 20px;
-  }
-  &__text {
-    margin-bottom: 10px;
+      & > .footer__section--about {
+        grid-column: auto;
+      }
+    }
   }
 
   &__section {
-    margin-bottom: 20px;
+    &--about,
+    &--offer,
+    &--company,
+    &--contact {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
   }
 
-  &__address {
-    font-size: 1.4rem;
-
-    margin-bottom: 10px;
-  }
-  &__span {
-    font-size: 1.2rem;
-  }
-
-  &__list {
-    list-style: none;
-    padding: 0;
-  }
-
+  &__address,
+  &__list,
   &__item {
-    margin-bottom: 5px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 7px;
+    font-weight: 400;
+    list-style: none;
   }
 
   &__link {
-    font-size: 1.4rem;
-    font-weight: 500;
+    color: #000000;
     text-decoration: none;
-    color: inherit;
-    transition: color 0.2s ease-in-out;
-  }
-  &__link:hover {
-    color: $focus;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $main-color;
+    }
   }
 
-  &__copyright {
-    margin-top: 20px;
+  &__separator {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #e9ecef;
+  }
+
+  &__bottom {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    &__icons {
-      margin-top: 10px;
-    }
-
-    &__icon-link {
-      margin-right: 10px;
-    }
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
   }
-  &__icon {
-    width: 35px;
-    height: 35px;
+
+  &__text {
+    font-size: 14px;
   }
 }
