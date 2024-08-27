@@ -15,7 +15,6 @@ $(document).ready(function () {
     $carousel.removeClass("slider-home-page--hidden");
   });
 
-  // Sprawdzenie czy przycisk zamykający istnieje i dodanie obsługi kliknięcia
   const $closeButton = $("#sliderHomePageClose");
   if ($closeButton.length) {
     $closeButton.on("click", function () {
@@ -41,14 +40,12 @@ $(document).ready(function () {
     }
   });
 
-  // Zamknięcie karuzeli po kliknięciu na tło
   $carousel.on("click", function (e) {
     if ($(e.target).is("#slider-home-page, .slider-home-page__image")) {
       $carousel.addClass("slider-home-page--hidden");
     }
   });
 
-  // Obsługa swipe
   $carousel.on("touchstart", function (e) {
     touchStartX = e.changedTouches[0].screenX;
   });

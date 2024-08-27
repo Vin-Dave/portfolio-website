@@ -22,7 +22,7 @@
     }
 
     @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
 
       & > .footer__section--about {
         grid-column: auto;
@@ -44,7 +44,9 @@
     margin-bottom: 0.5rem;
     font-weight: 700;
   }
-
+  &__address {
+    max-width: 300px;
+  }
   &__address,
   &__list,
   &__item {

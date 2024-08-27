@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    // Walidacja formularza
     const firstName = contactForm
       .querySelector(".contact__input--first-name")
       .value.trim();
